@@ -30,7 +30,7 @@ services:
       - static:/static/
 
   gateway:
-    image: kuzminkirillch/kittygram_nginx
+    image: kuzminkirillch/kittygram_gateway
     env_file: .env
     depends_on:
       - backend

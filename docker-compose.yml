@@ -20,14 +20,12 @@ services:
       - static:/app/backend_static/
       - media:/app/media/
   frontend:
-    # image: kuzminkirillch/kittygram_frontend
     env_file: .env
     build: ./frontend/
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static:/frontend_static
   gateway:
-    # image: kuzminkirillch/kittygram_gateway
     build: ./nginx/
     env_file: .env
     ports:
